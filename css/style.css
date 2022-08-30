@@ -315,3 +315,65 @@ services
     gap: 30px;
   }
 }
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Design
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.design {
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 600px;
+  background-image: url("../img/design-features.jpg");
+  background-size: cover;
+}
+.design::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgb(0 0 0 / 70%);
+}
+.design .box {
+  position: absolute;
+  background-color: var(--transparent-color);
+  width: 50%;
+  right: 0;
+  top: 25%;
+  transform: translateY(-50%);
+  padding: 50px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.design .box h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.design .box ul li {
+  padding: 15px 0;
+  position: relative;
+}
+.design .box ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f108";
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+.design img {
+  position: relative;
+  bottom: -150px;
+  left: 15%;
+}
+
+@media (max-width: 767px) {
+  .design .box {
+    width: 100%;
+  }
+}
