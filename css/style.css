@@ -39,6 +39,7 @@ p {
   font-family: Arial;
   font-size: 15px;
   padding: 10px 5px;
+  line-height: 2;
 }
 .container {
   padding-left: 15px;
@@ -75,6 +76,42 @@ p {
 }
 /*main_titel*/
 .title {
+  color: #ddd;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: relative;
+}
+.title::before {
+  position: absolute;
+  content: "";
+  width: 120px;
+  height: 1px;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  background-color: #0599c2;
+}
+.title::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  left: 50%;
+  bottom: calc(-15px - 7.5px);
+  transform: translateX(-50%);
+  border: 2px solid rgb(216, 215, 215);
+  border-radius: 50%;
+  background-color: #fff;
+}
+.title + p {
+  width: 550px;
+  max-width: 100%;
+  margin: 0 auto 100px;
+  line-height: 2;
+  color: #777;
+  text-align: center;
 }
 
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
@@ -243,5 +280,38 @@ Home
   }
   .home .fa-angle-right {
     right: 5px;
+  }
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+services
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.services {
+  position: relative;
+  background-color: #fff;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 50px;
+}
+.services .box {
+  display: flex;
+  gap: 50px;
+}
+.services .box i {
+  color: #777;
+}
+.services .box h3 {
+  margin-bottom: 30px;
+  color: var(--main-color);
+}
+@media (max-width: 767px) {
+  .services .box {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
   }
 }
