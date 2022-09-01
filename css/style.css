@@ -736,3 +736,114 @@ quote
   font-size: 20px;
   font-weight: bold;
 }
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Pricing 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.pricing {
+  position: relative;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.pricing .box {
+  background-color: #fcfcfc;
+  text-align: center;
+  border-top: 1px solid var(--main-color);
+}
+.pricing .box .head {
+  border-bottom: 1px solid var(--main-color);
+  width: 100%;
+  padding: 30px 0 20px;
+}
+.pricing .box .head h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing .box .head span {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+}
+.pricing .box .head span::before {
+  position: relative;
+  content: "$";
+  font-size: 25px;
+  top: -40px;
+  margin-right: 15px;
+  font-weight: normal;
+}
+.pricing .box .head span::after {
+  content: "/Mo";
+  font-size: 20px;
+  position: relative;
+  right: -15px;
+}
+.pricing .box ul {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .box ul > li {
+  padding: 20px;
+  position: relative;
+}
+.pricing .box ul li:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  width: 140px;
+  height: 0.5px;
+  background-color: var(--main-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.pricing .box .foot {
+  padding: 20px;
+}
+.pricing .box .foot a {
+  display: block;
+  padding: 20px 20px;
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  border-radius: .7rem;
+  overflow: hidden;
+}
+.pricing .box .foot a::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  top: 0;
+  left: -100%;
+  color: #fff;
+  z-index: -1;
+  transition: var(--transition);
+}
+.pricing .box .foot a:hover::before,
+.pricing .box .foot a:hover {
+  left: 0;
+  color: #fff;
+}
+.pricing .contact-text{
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing .contact-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: .7rem;
+}
