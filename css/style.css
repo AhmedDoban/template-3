@@ -812,7 +812,7 @@ Pricing
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   overflow: hidden;
 }
 .pricing .box .foot a::before {
@@ -832,7 +832,7 @@ Pricing
   left: 0;
   color: #fff;
 }
-.pricing .contact-text{
+.pricing .contact-text {
   text-align: center;
   margin: 50px auto 20px;
   font-size: 20px;
@@ -845,5 +845,84 @@ Pricing
   color: white;
   padding: 15px 30px;
   text-decoration: none;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+subscribe 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.subscribe {
+  position: relative;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url("../img/subscribe.jpg");
+  background-size: cover;
+}
+.subscribe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+.subscribe .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
+.subscribe form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe form input[type="email"] {
+  padding: 20px 20px 20px 60px;
+  background: none;
+  border: 1px solid var(--main-color);
+  border-right: none;
+  cursor: pointer;
+  caret-color: var(--main-color);
+  width: calc(100% - 130px);
+}
+.subscribe form input[type="submit"] {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-left: none;
+  padding: 20px;
+  text-transform: uppercase;
+  color: white;
+  width: 130px;
+}
+.subscribe form input[type="submit"]:hover{
+  background-color: var(--transparent-color);
+}
+.subscribe form input[type="email"]:focus,
+.subscribe form input[type="submit"]:focus {
+  outline: none;
+}
+.subscribe form ::placeholder {
+  color: rgb(255, 255, 255);
+}
+.subscribe form i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.subscribe p{
+  margin-left: 50px;
+}
+@media (max-width: 991px) {
+  .subscribe p {
+    margin: 30px 0 0;
+  }
 }
